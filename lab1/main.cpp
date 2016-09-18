@@ -1,14 +1,14 @@
-#include <string>
+﻿#include <string>
 #include <iostream>
 
 enum Result
 {
-	NOT_A_NUMBER = -1,	//incorrect user input
-	NOT_SHAPE = -2,		//any of lengths is not positive
-	NOT_TRIANGLE = -3,	//sum of two sides is shorter than other one
-	EQUILATERAL = 2,	//all sides are equal
-	ISOSCELES = 1,		//two sides are equal
-	SIMPLE = 0			//other triangle
+	NOT_A_NUMBER = -1,	//некорректный ввод
+	NOT_SHAPE = -2,		//неположительная длина
+	NOT_TRIANGLE = -3,	//сумма двух сторон не больше чем другая сторона
+	EQUILATERAL = 2,	//все стороны равны
+	ISOSCELES = 1,		//две стороны равны
+	SIMPLE = 0			//любой другой треугольник
 };
 
 Result CheckShapeType(const std::string & first, const std::string & second, const std::string & third)
@@ -48,27 +48,27 @@ void OutputResult(Result result)
 {
 	if (result == NOT_A_NUMBER)
 	{
-		std::cout << "incorrect user input (all parameters must be numbers)";
+		std::cout << "Некорректный пользовательский ввод (все параметры должны быть числами)";
 	}
 	else if (result == NOT_SHAPE)
 	{
-		std::cout << "not a shape (non-positive length detected)";
+		std::cout << "Не фигура (Одна из сторон имеет неположительную длину)";
 	}
 	else if (result == NOT_TRIANGLE)
 	{
-		std::cout << "not a triangle";
+		std::cout << "Не треугольник";
 	}
 	else if (result == SIMPLE)
 	{
-		std::cout << "simple triangle";
+		std::cout << "Простой треугольник";
 	}
 	else if (result == ISOSCELES)
 	{
-		std::cout << "isosceles triangle";
+		std::cout << "Равнобедренный треугольник";
 	}
 	else if (result == EQUILATERAL)
 	{
-		std::cout << "equilateral triangle";
+		std::cout << "Равносторонний треугольник";
 	}
 }
 
@@ -76,7 +76,7 @@ int main(int argc, char * argv[])
 {
 	if (argc != 4) 
 	{
-		std::cout << "Incorrect program execution.\nExample: triangle.exe <length1> <length2> <length3>" << std::endl;
+		std::cout << "Некоректный запуск программы.\nПример: triangle.exe <длина1> <длина2> <длина3>" << std::endl;
 		return -4;
 	}
 	Result result = CheckShapeType(argv[1], argv[2], argv[3]);
