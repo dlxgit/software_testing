@@ -41,11 +41,11 @@ triangle.exe 3.888 3.888 3.888
 IF NOT ERRORLEVEL 2 GOTO err
 
 
-echo Testing has finished successfully.
+echo Тестирование завершено успешно.
 pause
 EXIT /b
 
 :err
-echo Testing has finished unsuccessfully.
+echo Тестирование завершено неуспешно.
 pause
 EXIT /b

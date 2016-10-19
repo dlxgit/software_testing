@@ -1,5 +1,6 @@
 ﻿#include <string>
 #include <iostream>
+#include <windows.h>
 
 enum Result
 {
@@ -74,6 +75,7 @@ void OutputResult(Result result)
 
 int main(int argc, char * argv[])
 {
+	SetConsoleOutputCP(1251);
 	if (argc != 4) 
 	{
 		std::cout << "Некоректный запуск программы.\nПример: triangle.exe <длина1> <длина2> <длина3>" << std::endl;
